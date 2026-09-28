@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yarının Teknolojileri · Bilişim Filmleri</title>
+<meta name="description" content="6. sınıf Bilişim Teknolojileri ve Yazılım, BTY.6.1.1: Yenilikçi bilişim teknolojilerini sınıflandırabilme. Karo ile 2,2 dakikalık animasyon.">
+<link rel="stylesheet" href="css/ui.css">
+</head>
+<body>
+<div id="app">
+  <header class="top">
+    <a class="logo" href="https://hakanatas.github.io/bilisim-filmleri/?sinif=6" title="Bütün filmler" aria-label="Bilişim Filmleri"><i></i></a>
+    <div class="titles">
+      <h1>Yarının Teknolojileri <em>Technologies of Tomorrow</em></h1>
+      <p>6. sınıf Bilişim Teknolojileri ve Yazılım · BTY.6.1.1 · Karo ile 2,2 dakika</p>
+    </div>
+    <div class="now">
+      <div class="now-scene" id="sceneName">—</div>
+      <div class="now-concept" id="sceneConcept">—</div>
+    </div>
+  </header>
+  <main class="stage" id="stage">
+    <div class="frame" id="frame"><canvas id="film" width="1920" height="1080"></canvas>
+      <div class="loading" id="loading">karolar diziliyor…</div>
+    </div>
+  </main>
+  <section class="controls">
+    <div class="row transport">
+      <button id="restart" class="icon" title="Başa dön (Home)" aria-label="Başa dön"><svg viewBox="0 0 24 24"><path d="M6 5v14M19 5 9 12l10 7z"/></svg></button>
+      <button id="play" class="play" title="Oynat / Duraklat (Boşluk)" aria-label="Oynat">
+        <svg class="i-play" viewBox="0 0 24 24"><path d="M8 5l11 7-11 7z"/></svg>
+        <svg class="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></svg></button>
+      <div class="time"><span id="tc">00:00.00</span><small id="dur">/ —</small></div>
+      <div class="scrub" id="scrub"><div class="track"><div class="fill" id="fill"></div></div><div class="markers" id="markers"></div><div class="head" id="head"></div></div>
+    </div>
+    <div class="row options">
+      <div class="grp"><span>Sahne</span><div class="seg" id="scenes"></div></div>
+      <div class="grp"><span>Hız</span><div class="seg" id="speeds"></div></div>
+      <div class="grp"><span>Biçim</span><div class="seg" id="formats"></div></div>
+      <div class="grp"><span>Altyazı</span><div class="seg" id="caps"></div></div>
+      <div class="grp"><span>Ses</span><div class="seg" id="sound"></div><em class="snd" id="sndInfo"></em></div>
+      <button id="srt" class="ghost" title="Altyazı dosyasını indir">.srt ↓</button>
+      <button id="png" class="ghost" title="Bu kareyi PNG olarak kaydet">kare ↓</button>
+    </div>
+  </section>
+</div>
+<script src="src/core/math.js"></script>
+<script src="src/core/fonts.js"></script>
+<script src="src/draw/palette.js"></script>
+<script src="src/draw/text.js"></script>
+<script src="src/draw/shapes.js"></script>
+<script src="src/draw/icons.js"></script>
+<script src="src/draw/icons2.js"></script>
+<script src="src/draw/karo.js"></script>
+<script src="src/draw/stage.js"></script>
+<script src="src/kit/templates.js"></script>
+<script src="src/kit/templates2.js"></script>
+<script src="src/kit/templates3.js"></script>
+<script src="src/kit/apps.js"></script>
+<script src="src/kit/define.js"></script>
+<script src="film.config.js"></script>
+<script src="captions.js"></script>
+<script src="scenes/film.js"></script>
+<script src="src/audio/synth.js"></script>
+<script src="src/ui/player.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "yarinin-teknolojileri",
+  "version": "1.0.0",
+  "description": "Yarının Teknolojileri — 6. sınıf Bilişim Teknolojileri ve Yazılım, BTY.6.1.1. Canvas 2D ile prosedürel çizilen 2,2 dakikalık sesli animasyon; MP4/SRT dışa aktarımı.",
+  "private": true,
+  "scripts": {
+    "preview": "node scripts/serve.mjs",
+    "export": "node scripts/export.mjs",
+    "srt": "node scripts/srt.mjs",
+    "shots": "node scripts/shots.mjs",
+    "check": "node scripts/shots.mjs --check",
+    "release": "node scripts/release.mjs",
+    "build": "node scripts/build.mjs"
+  },
+  "dependencies": {
+    "playwright": "1.56.0"
+  },
+  "license": "CC-BY-NC-4.0",
+  "author": "Hakan Ataş"
+}

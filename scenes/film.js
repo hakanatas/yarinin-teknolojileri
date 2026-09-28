@@ -1,0 +1,103 @@
+/* ─────────────────────────────────────────────────────────────
+   YARININ TEKNOLOJİLERİ — BTY.6.1.1 (senaryo)
+   Her vuruş bir altyazıdır: tr, en, note (öğretmen için seslendirme).
+   Değiştirdikten sonra: npm run build
+   ───────────────────────────────────────────────────────────── */
+BF.defineFilm({
+  meta: {
+    slug: 'yarinin-teknolojileri', title: 'Yarının Teknolojileri', titleEn: 'Technologies of Tomorrow', code: 'BTY.6.1.1', grade: 6,
+    outcomeEn: 'Classifying innovative information technologies',
+    summary: 'Artırılmış gerçeklik ve sanal gerçeklik karşılaştırılarak yenilikçi bilişim teknolojilerine giriş yapılır. Giyilebilir teknolojiler, bulut depolama, nesnelerin interneti, yapay zekâ, 3B yazıcı ve dron gibi kavramlar tanıtılır. Bu teknolojilerin günlük hayatı nasıl kolaylaştırdığı örneklerle gösterilir. Son olarak yenilikçi teknolojiler sağlık, eğitim, tarım ve ulaşım gibi kullanım alanlarına göre gruplandırılır.',
+    summaryEn: 'AR and VR are compared; wearables, cloud storage, the Internet of Things, AI, 3D printers and drones are introduced; their role in making daily life easier is shown; and they are grouped by field: health, education, farming and transport.',
+    blurb: 'Artırılmış ve sanal gerçeklik, giyilebilir teknoloji, bulut, nesnelerin interneti; kullanım alanları.',
+    posterAlt: 'Başlık ve Karo; çevresinde VR gözlüğü, akıllı saat, bulut ve dron karoları',
+  },
+  scenes: [
+    { type: 'intro', icons: [{ icon: 'vr', c: 'mor' }, { icon: 'ar', c: 'turkuaz' }, { icon: 'watch', c: 'mercan' }, { icon: 'cloud', c: 'kobalt' }, { icon: 'iot', c: 'zumrut' }, { icon: 'drone', c: 'safran' }, { icon: 'printer3d', c: 'mercan' }, { icon: 'ai', c: 'kobalt' }],
+      beats: [
+        { tr: 'Boyadığım dinozor tabletin ekranında canlandı!', en: 'The dinosaur I coloured came alive on the tablet!', extra: 1,
+          note: 'Karo bir boyama sayfasını boyadı. Tableti sayfaya tutunca dinozor ekranda canlandı ve yürümeye başladı!', karo: { mood: 'surprised', caret: '!' } },
+        { tr: 'Bu hangi teknoloji?', en: 'Which technology is this?',
+          note: 'Bu, yenilikçi bilişim teknolojilerinden biri. Gel, yarının teknolojilerini tanıyalım.' },
+      ] },
+    { type: 'compare', name: 'AR mi, VR mi?', en: 'AR or VR?', desc: 'Artırılmış gerçeklik ile sanal gerçekliğin farkı.', out: 'a',
+      left: 'ARTIRILMIŞ GERÇEKLİK', right: 'SANAL GERÇEKLİK', leftC: 'turkuaz', rightC: 'mor', sameLabel: 'ortak', diffLabel: 'fark',
+      beats: [
+        { tr: 'AR gerçek dünyaya sanal nesne ekler', en: 'AR adds virtual objects to the real world', extra: 1,
+          note: 'Artırılmış gerçeklikte, yani AR\'da, gerçek dünyayı görmeye devam ederiz. Ekranda üstüne sanal bir dinozor eklenir.',
+          a: { icon: 'ar', name: 'Tabletteki dinozor', tag: 'AR', c: 'turkuaz' }, b: { icon: 'vr', name: 'VR gözlüğüyle uzay', tag: 'VR', c: 'mor' }, same: 'üç boyutlu deneyim', diff: ['AR: gerçek dünya görünür', 'VR: gerçek dünya kapanır'] },
+        { tr: 'VR bizi bambaşka bir dünyaya götürür', en: 'VR takes us into a whole new world',
+          note: 'Sanal gerçeklikte, yani VR\'da, gözlüğü takınca gerçek dünya kapanır; kendimizi uzayda ya da bir müzede buluruz.',
+          a: { icon: 'phone', name: 'Kamerayla mobilya dene', tag: 'AR', c: 'turkuaz' }, b: { icon: 'library', name: 'Sanal müze gezisi', tag: 'VR', c: 'mor' }, same: 'eğlenceli ve öğretici', diff: ['AR: telefon yeter', 'VR: gözlük gerekir'] },
+      ] },
+    { type: 'cards', name: 'Yeni kavramlar', en: 'New ideas', desc: 'Giyilebilir teknoloji, bulut, nesnelerin interneti; yapay zekâ, 3B yazıcı, dron.', out: 'a',
+      cards: [
+        { word: 'GİYİLEBİLİR', def: 'Üzerimizde taşıdığımız akıllı cihazlar', icon: 'watch', c: 'mercan' },
+        { word: 'BULUT', def: 'Dosyaları internetteki sunucularda saklamak', icon: 'cloud', c: 'kobalt' },
+        { word: 'NESNELERİN İNTERNETİ', def: 'İnternete bağlı eşyalar: akıllı ampul', icon: 'iot', c: 'zumrut' },
+      ],
+      result: { word: 'YENİLİKÇİ TEKNOLOJİLER', c: 'safran', chips: ['yapay zekâ', '3B yazıcı', 'dron'], line: 'Hayatımızı kolaylaştıran yeni buluşlar' },
+      beats: [
+        { tr: 'Giyilebilir: akıllı saat, akıllı gözlük', en: 'Wearables: smart watches and glasses',
+          note: 'Giyilebilir teknolojiler üzerimizde taşıdığımız akıllı cihazlardır: akıllı saat, akıllı gözlük gibi.' },
+        { tr: 'Bulut: dosyalar internette saklanır', en: 'Cloud: files are kept online',
+          note: 'Bulut depolamada dosyalarımız internetteki sunucularda saklanır. Onlara her cihazdan ulaşabiliriz.' },
+        { tr: 'Nesnelerin interneti: eşyalar birbirine bağlanır', en: 'Internet of Things: objects talk to each other',
+          note: 'Nesnelerin internetinde ampul, buzdolabı, saksı gibi eşyalar internete bağlanır ve bilgi paylaşır.' },
+        { tr: 'Yapay zekâ, 3B yazıcı ve dron da yenilikçi', en: 'AI, 3D printers and drones are innovative too', extra: 1,
+          note: 'Yapay zekâ, üç boyutlu yazıcılar ve dronlar da yenilikçi bilişim teknolojileridir.' },
+      ] },
+    { type: 'columns', name: 'Hayatı kolaylaştırır', en: 'Making life easier', desc: 'Yenilikçi teknolojilerin günlük hayatı kolaylaştırmadaki rolü.', out: 'b',
+      cols: [{ label: 'TEKNOLOJİ', c: 'kobalt' }, { label: 'NE KOLAYLIK SAĞLAR?', c: 'zumrut' }],
+      items: [
+        { text: 'Akıllı saat', col: 0, icon: 'watch', beat: 0 },
+        { text: 'Bulut depolama', col: 0, icon: 'cloud', beat: 1 },
+        { text: 'Akıllı ev', col: 0, icon: 'smarthome', beat: 2 },
+        { text: 'Adımlarını sayar, hareket etmeni hatırlatır', col: 1, icon: 'footprint', beat: 0 },
+        { text: 'Ödevine okuldan da evden de ulaşırsın', col: 1, icon: 'laptop', beat: 1 },
+        { text: 'Işıkları telefondan kapatır, enerji tasarrufu yaparsın', col: 1, icon: 'lightbulb', beat: 2 },
+      ],
+      beats: [
+        { tr: 'Akıllı saat hareket etmeni hatırlatır', en: 'A smart watch reminds you to move',
+          note: 'Akıllı saat adımlarımızı sayar ve uzun süre oturduğumuzda hareket etmemizi hatırlatır.' },
+        { tr: 'Bulut ile dosyalar her yerde', en: 'With the cloud, files are everywhere',
+          note: 'Ödevimizi buluta kaydedersek ona okuldan da evden de ulaşabiliriz.' },
+        { tr: 'Akıllı ev enerji tasarrufu sağlar', en: 'A smart home saves energy', extra: 1,
+          note: 'Akıllı evde unuttuğumuz ışıkları telefondan kapatabiliriz. Hem kolaylık hem tasarruf!' },
+      ] },
+    { type: 'sort', name: 'Kullanım alanları', en: 'Fields of use', desc: 'Yenilikçi teknolojiler sağlık, eğitim, tarım ve ulaşım alanlarına göre gruplandırılır.', out: 'c',
+      bins: [{ label: 'SAĞLIK', c: 'mercan' }, { label: 'EĞİTİM', c: 'kobalt' }, { label: 'TARIM', c: 'zumrut' }, { label: 'ULAŞIM', c: 'safran' }],
+      items: [
+        { icon: 'mri', name: 'Röntgen okuyan yapay zekâ', bin: 0, beat: 1 },
+        { icon: 'watch', name: 'Nabız ölçen saat', bin: 0, beat: 1 },
+        { icon: 'ar', name: 'AR ile gezegen dersi', bin: 1, beat: 1 },
+        { icon: 'vr', name: 'VR ile müze gezisi', bin: 1, beat: 2 },
+        { icon: 'soilSensor', name: 'Toprak nem sensörü', bin: 2, beat: 2 },
+        { icon: 'drone', name: 'Tarlayı izleyen dron', bin: 2, beat: 2 },
+        { icon: 'busCard', name: 'Akıllı ulaşım kartı', bin: 3, beat: 3 },
+        { icon: 'navigation', name: 'Trafiğe göre yol bulma', bin: 3, beat: 3 },
+      ],
+      beats: [
+        { tr: 'Bu teknolojiler nerelerde kullanılıyor?', en: 'Where are these technologies used?',
+          note: 'Yenilikçi teknolojileri kullanıldıkları alanlara göre gruplayalım.' },
+        { tr: 'Sağlıkta ve eğitimde', en: 'In health and in education',
+          note: 'Sağlıkta yapay zekâ doktorlara görüntüleri incelemede yardım eder, akıllı saat nabzı ölçer. Eğitimde AR ile gezegenleri inceleriz.' },
+        { tr: 'Müzede VR, tarlada sensör ve dron', en: 'VR in museums; sensors and drones on farms',
+          note: 'VR ile müzeleri gezebiliriz. Tarımda toprak nem sensörleri ve dronlar çiftçiye yardım eder.' },
+        { tr: 'Ulaşımda akıllı kart ve yol bulma', en: 'Smart cards and route finding in transport', extra: 2,
+          note: 'Ulaşımda akıllı kartlar ve trafiğe göre en kısa yolu bulan uygulamalar kullanılır.' },
+      ] },
+    { type: 'summary',
+      lines: [
+        { icon: 'ar', c: 'turkuaz', text: 'AR gerçeğe ekler, VR yeni dünya açar' },
+        { icon: 'iot', c: 'zumrut', text: 'Giyilebilir, bulut, nesnelerin interneti' },
+        { icon: 'drone', c: 'safran', text: 'Sağlık, eğitim, tarım, ulaşım' },
+      ],
+      beats: [
+        { tr: 'Aklında kalsın: yenilikçi teknoloji hayatı kolaylaştırır', en: 'Remember: innovative tech makes life easier',
+          note: 'Aklında kalsın: yenilikçi bilişim teknolojileri pek çok alanda hayatımızı kolaylaştırır.' },
+        { tr: 'Yarının teknolojisi bugün başlıyor!', en: 'Tomorrow\'s technology starts today!',
+          note: 'Belki yarının teknolojisini sen geliştireceksin!' },
+      ] },
+  ],
+});
